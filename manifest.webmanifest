@@ -1,0 +1,16 @@
+{
+    "name": "João Sousa GitHub",
+    "short_name": "site",
+    "theme_color": "#3656c9",
+    "background_color": "#3656c9",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+          "src": "icon.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+      ]
+  }

@@ -1,0 +1,62 @@
+/* copyright João Sousa 2022 */
+.fade {
+    opacity: 0;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  75%  {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInR {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to  {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes fadeInL {
+    from {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    to  {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes fadeInT {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to  {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+@keyframes fadeInB {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to  {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}

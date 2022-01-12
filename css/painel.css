@@ -1,0 +1,31 @@
+/* copyright João Sousa 2022 */
+.painel {
+    margin: 5%;
+    width: 90%;
+    background-color: var(--cor1);
+    color: var(--cor1contr);
+    border-radius: var(--radius);
+    padding: 30px;
+}
+
+.painel > p {
+    padding: 30px 0px 30px 0px;
+    font-family: 'roboto';
+} 
+
+.painel-imagem {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+.painel-titulo {
+    text-align: center;
+    font-family: var(--font1);
+    font-size: 1.5em;
+    padding: 30px;
+}
+
+.painel-titulo > .svgIcons > svg{
+    height: 70px;
+}

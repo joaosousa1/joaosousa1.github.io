@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt">
+<!-- copyright João Sousa 2022 -->
+<!--
+    Todo código foi concebido por mim com vanilla javascript css html5.
+    Exepto o background body que utiliza Three.js.
+    Nas imagens skybox veja os autores em /img/skyBox/ <tema> /readme.txt
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="modelo">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="João Sousa">
+    <meta name="google" content="notranslate">
+    <meta name="description" content="João Sousa GitHub Projects">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/png" href="icon.png" />
+    <title>João Sousa</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/painel.css">
+    <link rel="stylesheet" href="css/uiStyle.css">
+    <link rel="stylesheet" href="css/intersectionObs.css">
+
+    <script src="js/svgIcons.js"></script>
+    <script defer src="js/toolsDom.js"></script>
+    <script defer src="js/three.js"></script>
+    <script defer src="js/intersectionObs.js"></script>
+    <script defer src="js/index.js"></script>
+    
+</head>
+<body>
+    <div class="top sombra">
+        <div class="grid-top conteudo">
+            <div class="h-centro">
+                <div id="titulo" style="cursor:pointer;" onclick="window.open('https://tuxmind.blogspot.com')">João
+                    Sousa
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="conteudo">
+        <div class="grid-content">
+
+            <div style="display: grid; place-items: center; min-height: 150px; margin-top: 20px;"  data-anim="pop">
+                <img width="20%" src="img/js_2021_site.png" alt="" style="border-radius: 50%;">
+            </div>
+
+            <div class="painel sombra" data-anim="fadeInT">
+                <h3>Sobre mim</h3>
+                <p style="text-indent: 30px; text-align: justify;">
+                    Sou um entusiasta de tecnologias de informação que
+                    utiliza Linux desde 2004 🐧 para programar, navegar na web e jogar FPS. Tenho interesse por
+                    raspberry pi, servidores Linux, e de tudo que é tecnologia open source. Gosto de programar
+                    para a web com "vanilla" Javascript, CSS e HTML5, mas quando preciso de "super poderes" 🦸🏻‍♂️ uso no
+                    front-end Vue.js, React.js ou Three.js. No back-end gosto de Node.js e Mongodb, mas também uso
+                    PHP e MySQL. "Live long and prosper" to PHP 🖖. No modo criativo só utilizo ferramentas open source como Blender, Inkscape, Gimp,
+                    Kdenlive, VScode e também sei como fechar o "VIM" 😂. Sou autodidata e tenho um pouco de conhecimento de
+                    Java e Godot (GDScript) que já utilizei em pequenas apps publicadas no Android Google Play. Também tenho interesse por tecnologia blockchain (DeFi, smart contracts), IPFS (InterPlanetary
+                    File System) e metaverse.
+                </p>
+            </div>
+
+            <div class="painel sombra" data-anim="fadeInR">
+                <h3>GitHub</h3>
+                <p>O meu código no GitHub</p>
+                <a class="ui uiBotao" style="width: max-content;" href="https://github.com/joaosousa1" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="svgIcons" data-icon-name="github"></div>
+                    <div class="ui-separador"></div>
+                    João Sousa GitHub
+                </a>
+            </div>
+
+            <div class="painel sombra" data-anim="fadeInL">
+                <h3>Tuxmind</h3>
+                <p>Linux Shell Script e tecnologias open Source</p>
+                <a class="ui uiBotao" style="width: max-content;" href="https://tuxmind.blogspot.com" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="svgIcons" data-icon-name="blogger"></div>
+                    <div class="ui-separador"></div>
+                    Blog Tuxmind
+                </a>
+
+            </div>
+            
+            <div class="painel sombra" data-anim="fadeInL">
+                <h3>React.js Full-Stack</h3>
+                <p>Simples Blog. Back-end Node.js e Mongodb, Front-end com React.js</p>
+                <a class="ui uiBotao" style="width: max-content;" href="https://github.com/joaosousa1/full-stack-blog"
+                    target="_blank" rel="noopener noreferrer">
+                    <div class="svgIcons" data-icon-name="webglobe"></div>
+                    <div class="ui-separador"></div>
+                    React.js Full-Stack
+                </a>
+
+            </div>
+
+            <div class="painel sombra" data-anim="fadeInR">
+                <h3>Front-end POS "ponto de venda"</h3>
+                <p>Desenvolvido com vue.js e electron.js...</p>
+                <a class="ui uiBotao" style="width: max-content;" href="https://joaosousa1.github.io/app-ponto-de-venda/"
+                    target="_blank" rel="noopener noreferrer">
+                    <div class="svgIcons" data-icon-name="webglobe"></div>
+                    <div class="ui-separador"></div>
+                    App POS front-end
+                </a>
+
+            </div>
+            <div class="painel sombra" data-anim="fadeInR">
+                <h3>Encontra palavras</h3>
+                <p>Uma app que encontra todas as palavras diponíveis no dicionário utilizando 3 ou mais letras
+                    disponibilizadas.</p>
+                <a class="ui uiBotao" style="width: max-content;" href="https://joaosousa1.github.io/encontra-palavras/"
+                    target="_blank" rel="noopener noreferrer">
+                    <div class="svgIcons" data-icon-name="webglobe"></div>
+                    <div class="ui-separador"></div>
+                    web App encontra palavras
+                </a>
+
+            </div>
+            <div class="painel sombra" data-anim="fadeInL">
+                <h3>Matemática 4kids</h3>
+                <p>Conversor de unidades, cálculo de área volume perímetro etc...</p>
+                <a class="ui uiBotao" style="width: max-content;" href="https://joaosousa1.github.io/matematica-e-fixe/"
+                    target="_blank" rel="noopener noreferrer">
+                    <div class="svgIcons" data-icon-name="webglobe"></div>
+                    <div class="ui-separador"></div>
+                    web App matemática 4kids
+                </a>
+
+            </div>
+
+            <div class="painel sombra" data-anim="fadeInR">
+                <h3>Apps Google Play</h3>
+                <p>Apps que eu desenvolvi para o Google Play apenas um hobby</p>
+                <a class="ui uiBotao" style="width: max-content;" href="https://joao-sousa-apps.blogspot.com/"
+                    target="_blank" rel="noopener noreferrer">
+                    <div class="svgIcons" data-icon-name="googleplay"></div>
+                    <div class="ui-separador"></div>
+                    Google Play
+                </a>
+            </div>
+
+            <div class="painel sombra" data-anim="fadeInL">
+                <div style="display: grid; place-items: center; height: 100%;">
+                    <div style="text-align: center;">
+                        <p style="font-size: 0.7em;">Copyright João Sousa  2022</p>
+                        <p style="font-size: 0.7em;">Comcebido com "vanilla" Javascript CSS e HTML5</p>
+                        <p style="font-size: 0.7em;">Só o background body da página utiliza Three.js</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

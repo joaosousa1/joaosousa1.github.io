@@ -1,0 +1,90 @@
+/* copyright João Sousa 2022 */
+:root {
+    --bgPage: #a1a1a1;
+    --cor0: #ffffff;
+    --cor1contr: #ffffff;
+    --cor1: #42444a;
+    --cor2: #43b581;
+    --cor3: hsl(227, 58%, 65%);
+    --cor3hover: hsl(227, 58%, 50%);
+    --cor4: #f9b83d;
+    --cor5: #d3d3d3;
+    --cor5contr: #42444a;
+    --corSombra: #1b1b1b99;
+    --corBorda: #222222;
+    --font1: 'Fredoka';
+    --radius: 8px;
+    --bor: 0px;
+}
+
+/* 3d stuff vai po canvas*/
+canvas { 
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    /*background-image: linear-gradient(to bottom, white, #222);*/
+    /*cursor: move;*/
+    z-index: -10;
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.grid_2colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@font-face {
+    font-family: 'Fredoka';
+    src: url('../font/FredokaOne-Regular.ttf');
+    /* Fredoka One by Milena Brandao fonts.google.com */
+}
+
+body {
+    opacity: 0;
+    background-color: var(--bgPage);
+    color: var(--cor1);
+    font-family: 'Fredoka';
+    text-rendering: optimizeLegibility;
+    /* overflow: hidden; */
+    transition: 0.5s;
+}
+
+.conteudo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+.h-centro {
+    display: flex;
+    align-items: center;
+}
+
+.sombra {
+    box-shadow: 0px 5px 10px 5px var(--corSombra) ;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns:  1fr;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .grid-content {
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+    }
+
+    #top-bar {
+        display: flex;
+    }
+
+}
