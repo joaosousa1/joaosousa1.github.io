@@ -33,12 +33,14 @@ button, .uiBotao {
     cursor: pointer;
     font-size: 0.8em;
     text-decoration: none;
+    box-shadow: 0 0 1px 2px var(--cor3);
 }
 
 button:hover, .uiBotao:hover {
     background-color: var(--cor3);
     /* color: var(--cor1); */
     /* box-shadow: 0 0 10px var(--cor2); */
+    box-shadow: 0 0 1px 2px var(--cor3hover);
 }
 
 .uiBotao > div > svg {
