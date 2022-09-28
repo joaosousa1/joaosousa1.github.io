@@ -145,3 +145,17 @@ function addSkyBox(nome) {
     return skybox
 
 }
+
+const cbox = document.querySelectorAll(".uiBotao");
+
+ for (let i = 0; i < cbox.length; i++) {
+     cbox[i].addEventListener("mouseover", function() {
+     cbox[i].parentElement.classList.toggle("painelHover");
+     });
+ }
+
+ for (let i = 0; i < cbox.length; i++) {
+    cbox[i].addEventListener("mouseout", function() {
+    cbox[i].parentElement.classList.toggle("painelHover");
+    });
+}
