@@ -14,7 +14,7 @@ observer = new IntersectionObserver((entries) => {
         console.log("ok")
         if (entry.intersectionRatio > 0) {
 
-            entry.target.style.animation = `${entry.target.dataset.anim} 0.6s 0.3s forwards ease-out`;
+            entry.target.style.animation = `${entry.target.dataset.anim} 0.6s 0.3s forwards cubic-bezier(0.18, 0.89, 0.43, 1.19)`;
             
         }
         else {
