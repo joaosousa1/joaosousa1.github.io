@@ -2,27 +2,23 @@
 const iobs = document.querySelectorAll("[data-anim]");
 
 const options = {
-    root: null,
+    root: document.body.conteudo,
     threshold: 0,
     rootMargin: "0px"
-
 }
 
-observer = new IntersectionObserver((entries) => { 
-
+let observer = new IntersectionObserver((entries) => {
+    let delay = 0;
     entries.forEach(entry => {
-        console.log("ok")
-        if (entry.intersectionRatio > 0) {
-
-            entry.target.style.animation = `${entry.target.dataset.anim} 0.6s 0.3s forwards cubic-bezier(0.18, 0.89, 0.43, 1.19)`;
-            
+        if (entry.isIntersecting) {
+            delay += 0.3;
+            entry.target.style.animation = `${entry.target.dataset.anim} 0.6s ${delay}s forwards cubic-bezier(0.18, 0.89, 0.43, 1.19)`;
         }
         else {
             // comentar se quiser só na entrada
             entry.target.style.animation = 'none';
         }
     })
-
 }, options);
 
 iobs.forEach(iob => {
