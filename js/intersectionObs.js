@@ -2,8 +2,8 @@
 const iobs = document.querySelectorAll("[data-anim]");
 
 const options = {
-    root: document.body.conteudo,
-    threshold: 0,
+    root: null,
+    threshold: 0.1,
     rootMargin: "0px"
 }
 
