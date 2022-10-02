@@ -3,24 +3,22 @@
     margin: 5%;
     width: 90%;
     background-color: var(--cor1);
-    background-image: linear-gradient(
-        to bottom right,
-        var(--cor1),
-        rgb(97, 102, 110),
-        rgb(71, 73, 75)
+    background: linear-gradient(
+        to right bottom,
+        #6e6e6e,
+        #47494b,
+        #3556ca,
+        #47494b,
+        #47494b
     );
     color: var(--cor1contr);
     border-radius: var(--radius);
     padding: 30px;
+    transition: background 0.3s;
+    background-size: 350% 350%;
 }
-
 .painelHover {
-    background-image: linear-gradient(
-        to bottom right,
-        var(--cor1),
-        #3556ca,
-        rgb(71, 73, 75)
-    );
+    background-size: 100% 100%;
 }
 
 .painel > p {
