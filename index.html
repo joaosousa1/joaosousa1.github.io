@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
-<!-- copyright João Sousa 2022 -->
+<!-- copyright João Sousa 2023 -->
 <!--
     Todo código foi concebido por mim com vanilla javascript css html5.
     Exepto o background body que utiliza Three.js.
@@ -23,18 +23,16 @@
     <link rel="stylesheet" href="css/uiStyle.css">
     <link rel="stylesheet" href="css/intersectionObs.css">
 
-    <script src="js/svgIcons.js"></script>
-    <script defer src="js/toolsDom.js"></script>
     <script defer src="js/three.js"></script>
     <script defer src="js/intersectionObs.js"></script>
     <script defer src="js/index.js"></script>
     
 </head>
 <body>
-    <div class="top sombra">
+    <div class="top sombra" id="topBar">
         <div class="grid-top conteudo">
             <div class="h-centro">
-                <div id="titulo" style="cursor:pointer;" onclick="window.open('https://tuxmind.blogspot.com')">João
+                <div id="titulo" onclick="window.open('https://tuxmind.blogspot.com')">João
                     Sousa
                 </div>
             </div> 
@@ -44,30 +42,30 @@
         <div class="grid-content">
 
             <div style="display: grid; place-items: center; min-height: 150px; margin-top: 20px;"  data-anim="pop">
-                <img width="20%" src="img/siteJS2022.png" alt="" style="border-radius: 50%;">
+                <img width="20%" src="img/siteJS2022.png" alt="" style="border-radius: 50%; box-shadow: 0px 5px 50px 5px var(--corSombra);">
             </div>
 
-            <div class="painel sombra" data-anim="fadeInT">
+            <div class="painel sombra painel-bg">
                 <h3>Sobre mim</h3>
-                <p style="text-indent: 30px; text-align: justify;">
+                <p style="text-indent: 30px; text-align: justify; font-family: fredoka;" class="text-gradient">
                     Sou um entusiasta de tecnologias de informação que
-                    utiliza Linux desde 2004 🐧 para programar e navegar na web. Tenho interesse por
+                    utiliza Linux desde 2004 <span>🐧</span> para programar e navegar na web. Tenho interesse por
                     raspberry pi, servidores Linux, e de tudo que é tecnologia open source. Gosto de programar
                     para a web com "vanilla" Javascript, CSS e HTML5, mas também estou familiarizado com
                     front-end Vue.js, React.js ou Three.js. No back-end gosto de Node.js e Mongodb, mas também uso
                     PHP e MySQL. No modo criativo só utilizo ferramentas open source como Blender, Inkscape, Gimp,
-                    Kdenlive, VScode e também sei como fechar o "VIM" 😂. Sou autodidata e tenho um pouco de conhecimentos de
+                    Kdenlive, VScode e também sei como fechar o "VIM". <span>😂</span> Sou autodidata e tenho um pouco de conhecimentos de
                     Java e Godot (GDScript) que já utilizei em pequenas apps publicadas no Android Google Play. Também tenho interesse por tecnologia blockchain (DeFi, smart contracts) e IPFS (InterPlanetary
                     File System).
                 </p>
             </div>
 
-            <div class="painel sombra" data-anim="fadeInR">
+            <div class="painel sombra" data-anim="fadeInL">
                 <h3>GitHub</h3>
                 <p>O meu código no GitHub</p>
                 <a class="ui uiBotao" style="width: max-content;" href="https://github.com/joaosousa1" target="_blank"
                     rel="noopener noreferrer">
-                    <div class="svgIcons" data-icon-name="github"></div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="m 9.99999,1.9999995 c -4.5318,0 -8.20235,3.67055 -8.20235,8.2023505 0,3.62954 2.34792,6.69517 5.60835,7.78198 0.41012,0.0718 0.56392,-0.1743 0.56392,-0.38961 0,-0.19481 -0.0103,-0.84074 -0.0103,-1.52769 -2.06084,0.37936 -2.59399,-0.50239 -2.75804,-0.96377 -0.0923,-0.23582 -0.49214,-0.96378 -0.84074,-1.15859 -0.28708,-0.15379 -0.6972,-0.53315 -0.0102,-0.5434 0.64593,-0.0103 1.10732,0.59467 1.26111,0.84074 0.73821,1.2406 1.9173,0.892 2.38893,0.67669 0.0718,-0.53315 0.28709,-0.892 0.5229,-1.09706 C 6.69855,13.61658 4.7915,12.90913 4.7915,9.7717295 c 0,-0.89201 0.31785,-1.63022 0.84075,-2.20439 -0.082,-0.20505 -0.36911,-1.0458 0.082,-2.17362 0,0 0.68695,-0.21531 2.25565,0.84074 0.65618,-0.18455 1.35338,-0.27683 2.05058,-0.27683 0.6972,0 1.3944,0.0923 2.05059,0.27683 1.5687,-1.0663 2.25565,-0.84074 2.25565,-0.84074 0.45113,1.12782 0.16405,1.96857 0.082,2.17362 0.5229,0.57417 0.84074,1.30213 0.84074,2.20439 0,3.1476505 -1.9173,3.8448505 -3.74232,4.0499105 0.29734,0.25632 0.55366,0.74846 0.55366,1.51743 0,1.09707 -0.0102,1.97882 -0.0102,2.25565 0,0.21531 0.15379,0.47164 0.56391,0.38961 3.23993,-1.08681 5.58785,-4.16269 5.58785,-7.78198 0,-4.5318005 -3.67055,-8.2023505 -8.20235,-8.2023505 z" /></svg></div>
                     <div class="ui-separador"></div>
                     João Sousa GitHub
                 </a>
@@ -78,7 +76,7 @@
                 <p>Linux Shell Script e tecnologias open Source</p>
                 <a class="ui uiBotao" style="width: max-content;" href="https://tuxmind.blogspot.com" target="_blank"
                     rel="noopener noreferrer">
-                    <div class="svgIcons" data-icon-name="blogger"></div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="m 16.995198,7.9968005 h -0.6656 c -0.550399,0 -0.9984,-0.4479998 -0.9984,-0.9983996 C 15.331198,4.2399995 13.091198,2 10.3328,2 H 6.9983995 C 4.2400005,2 2.0000005,4.2399995 2.0000005,6.9984009 V 13.001601 C 2.0000005,15.76 4.2400005,18 6.9983995,18 H 13.001599 C 15.759998,18 18,15.76 18,13.001601 V 9.0015992 C 18,8.4448005 17.551997,7.9968005 16.995198,7.9968005 Z M 6.9983995,5.9936006 h 3.9999985 c 0.550399,0 0.998401,0.4479999 0.998401,0.9983996 0,0.5503998 -0.448002,0.9983997 -0.998401,0.9983997 H 6.9983995 c -0.550399,0 -0.998399,-0.4479999 -0.998399,-0.9983997 0,-0.5503997 0.441601,-0.9983996 0.998399,-0.9983996 z M 12.9952,13.993599 H 6.9920015 c -0.5504,0 -0.998401,-0.447999 -0.998401,-0.998399 0,-0.5504 0.448001,-0.9984 0.998401,-0.9984 H 12.9952 c 0.550399,0 0.998399,0.448 0.998399,0.9984 0,0.5504 -0.441601,0.998399 -0.998399,0.998399 z" /></svg></div>
                     <div class="ui-separador"></div>
                     Blog Tuxmind
                 </a>
@@ -90,30 +88,30 @@
                 <p>Simples Blog. Back-end Node.js e Mongodb, Front-end com React.js</p>
                 <a class="ui uiBotao" style="width: max-content;" href="https://github.com/joaosousa1/full-stack-blog"
                     target="_blank" rel="noopener noreferrer">
-                    <div class="svgIcons" data-icon-name="webglobe"></div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"></path></svg></div>
                     <div class="ui-separador"></div>
                     React.js Full-Stack
                 </a>
 
             </div>
 
-            <div class="painel sombra" data-anim="fadeInR">
+            <div class="painel sombra" data-anim="fadeInL">
                 <h3>Front-end POS "ponto de venda"</h3>
                 <p>Desenvolvido com vue.js e electron.js...</p>
                 <a class="ui uiBotao" style="width: max-content;" href="https://joaosousa1.github.io/app-ponto-de-venda/"
                     target="_blank" rel="noopener noreferrer">
-                    <div class="svgIcons" data-icon-name="webglobe"></div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"></path></svg></div>
                     <div class="ui-separador"></div>
                     App POS front-end
                 </a>
 
             </div>
-            <div class="painel sombra" data-anim="fadeInR">
+            <div class="painel sombra" data-anim="fadeInL">
                 <h3>5letra5</h3>
                 <p>App inspirada no Wordle, mas com palavras em português. Você joga sem limites e sem spoilers.</p>
                 <a class="ui uiBotao" style="width: max-content;" href="https://joaosousa1.github.io/5letra5/"
                     target="_blank" rel="noopener noreferrer">
-                    <div class="svgIcons" data-icon-name="webglobe"></div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"></path></svg></div>
                     <div class="ui-separador"></div>
                     web App 5letra5
                 </a>
@@ -124,25 +122,25 @@
                 <p>Visualizador de ficheiros 3D (gltf glb) para páginas web</p>
                 <a class="ui uiBotao" style="width: max-content;" href="https://github.com/joaosousa1/glTFView"
                     target="_blank" rel="noopener noreferrer">
-                    <div class="svgIcons" data-icon-name="webglobe"></div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"></path></svg></div>
                     <div class="ui-separador"></div>
                     3D View (gltf glb)
                 </a>
 
             </div>
 
-            <div class="painel sombra" data-anim="fadeInR">
+            <div class="painel sombra" data-anim="fadeInL">
                 <h3>Apps Google Play</h3>
                 <p>Apps que eu desenvolvi para o Google Play apenas um hobby</p>
                 <a class="ui uiBotao" style="width: max-content;" href="https://joao-sousa-apps.blogspot.com/"
                     target="_blank" rel="noopener noreferrer">
-                    <div class="svgIcons" data-icon-name="googleplay"></div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M 3.3037498,2 11.073731,9.769058 13.436623,7.406166 C 13.204147,7.279333 4.3053788,2.424677 3.7545708,2.1309133 3.6107248,2.0462973 3.4550468,2.0076612 3.3037498,2 Z m -0.373379,0.078364 c -0.242732,0.1260584 -0.428695,0.394834 -0.428695,0.871218 v 14.110976 c 0,0.425397 0.136071,0.752515 0.391818,0.887814 L 10.846937,9.99493 Z m 10.7985022,5.487295 -2.429271,2.429272 2.401613,2.401613 c 1.786126,-0.980338 3.214619,-1.761271 3.333679,-1.820801 0.3968,-0.2108 0.806001,-0.769111 0,-1.203112 C 16.78693,9.242745 15.414009,8.489108 13.728873,7.565659 Z M 11.072809,10.220801 3.2945318,18 c 0.138828,-0.01566 0.290412,-0.06527 0.460039,-0.158572 0.512613,-0.280716 5.903034,-3.229396 9.6543942,-5.28447 z" /></svg></div>
                     <div class="ui-separador"></div>
                     Google Play
                 </a>
             </div>
 
-            <div class="painel sombra" data-anim="fadeInL">
+            <div class="painel sombra">
                 <div style="display: grid; place-items: center; height: 100%;">
                     <div style="text-align: center;">
                         <p style="font-size: 0.7em;">Copyright João Sousa 2023</p>

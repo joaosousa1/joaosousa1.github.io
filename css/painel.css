@@ -1,17 +1,17 @@
-/* copyright João Sousa 2022 */
+/* copyright João Sousa 2023 */
 .painel {
     margin: 5%;
     width: 90%;
     background-color: var(--cor1);
     background: linear-gradient(
         to right bottom,
-        #6e6e6e,
+        var(--cor4),
         #47494b,
-        #3556ca,
+        var(--cor3),
         #47494b,
-        #47494b
+        var(--cor4)
     );
-    color: var(--cor1contr);
+    color: var(--cor0);
     border-radius: var(--radius);
     padding: 30px;
     transition: background 0.3s;
@@ -23,7 +23,7 @@
 
 .painel > p {
     padding: 30px 0px 30px 0px;
-    font-family: 'roboto';
+    font-family: 'Arial';
 } 
 
 .painel-imagem {
@@ -41,4 +41,9 @@
 
 .painel-titulo > .svgIcons > svg{
     height: 70px;
+}
+
+.painel-bg {
+    background: initial;
+    background-color: var(--cor4);
 }

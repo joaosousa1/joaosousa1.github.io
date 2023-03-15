@@ -1,7 +1,6 @@
 /* copyright João Sousa 2022 */
 .ui {
-    background-color: var(--cor5);
-    border: var(--bor) solid var(--corBorda);
+    border: var(--bor) solid var(--cor0);
     padding: 0px 30px;
     border-radius: var(--radius);
     margin: 5px 0 20px;
@@ -11,8 +10,7 @@
     outline: none;
     /* width: max-content; */
     width: 100%;
-    height: 30px;
-    color: var(--cor5contr);
+    height: 40px;
     font-size: 1em;
     transition: 0.4s;
     text-align: center;
@@ -28,8 +26,8 @@ button, .uiBotao {
     font-family: 'Fredoka'; /*botoa não usa a fonte de body  */ 
     display: flex;
     align-items: center;
-    background-color: var(--cor3hover);
-    color: white;
+    background-color: var(--cor3);
+    color: var(--cor0);
     cursor: pointer;
     font-size: 0.8em;
     text-decoration: none;
@@ -40,7 +38,7 @@ button:hover, .uiBotao:hover {
     background-color: var(--cor3);
     /* color: var(--cor1); */
     /* box-shadow: 0 0 10px var(--cor2); */
-    box-shadow: 0 0 1px 2px var(--cor3hover);
+    box-shadow: 0 0 1px 2px var(--cor3);
 }
 
 .uiBotao > div > svg {
@@ -53,7 +51,8 @@ button:hover, .uiBotao:hover {
 }
 
 .ui-separador {
-  background-color: #fff;
+  background-color: var(--cor0);
+  background-color: #c5c5c5;
   width: 2px;
   height: 70%;
   margin-right: 20px;

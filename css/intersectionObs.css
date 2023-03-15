@@ -1,4 +1,8 @@
-/* copyright João Sousa 2022 */
+/* copyright João Sousa 2023 */
+.hide {
+  opacity: 0;
+}
+
 .fade {
     opacity: 0;
 }
@@ -17,7 +21,7 @@
   }
 }
 
-@keyframes fadeInR {
+@keyframes fadeInL {
     from {
       transform: translateX(-50px);
       opacity: 0;
@@ -28,7 +32,7 @@
     }
 }
 
-@keyframes fadeInL {
+@keyframes fadeInR {
     from {
       transform: translateX(50px);
       opacity: 0;
@@ -59,4 +63,13 @@
       transform: translateY(0);
       opacity: 1;
     }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to  {
+    opacity: 1;
+  }
 }

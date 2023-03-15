@@ -1,20 +1,15 @@
-/* copyright João Sousa 2022 */
+/* copyright João Sousa 2023 */
 :root {
     --bgPage: #a1a1a1;
     --cor0: #ffffff;
-    --cor1contr: #ffffff;
     --cor1: #42444a;
-    --cor2: #43b581;
-    --cor3: hsl(227, 58%, 65%);
-    --cor3hover: hsl(227, 58%, 50%);
-    --cor4: #f9b83d;
-    --cor5: #d3d3d3;
-    --cor5contr: #42444a;
+    --cor2: #89a3ff;
+    --cor3: #3656ca;
+    --cor4: #373737;
     --corSombra: #1b1b1b99;
-    --corBorda: #222222;
     --font1: 'Fredoka';
     --radius: 8px;
-    --bor: 0px;
+    --bor: 1px;
 }
 
 /* 3d stuff vai po canvas*/
@@ -22,10 +17,7 @@ canvas {
     position: fixed;
     left: 0px;
     top: 0px;
-    /*background-image: linear-gradient(to bottom, white, #222);*/
-    /*cursor: move;*/
-    z-index: -10;
-
+    z-index: -1;
 }
 
 * {
@@ -50,8 +42,6 @@ body {
     background-color: var(--bgPage);
     color: var(--cor1);
     font-family: 'Fredoka';
-    text-rendering: optimizeLegibility;
-    /* overflow: hidden; */
     transition: 0.5s;
 }
 
@@ -76,6 +66,23 @@ body {
     grid-template-columns:  1fr;
 }
 
+.text-gradient {
+    /* Set the background color */
+    background: linear-gradient(-45deg, var(--cor2), var(--cor3));
+    /* Mask the color to the text*/
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* Make the text fill color value transparent */
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient > span {
+    background: initial;
+    background-clip: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
+
 @media only screen and (min-width: 1000px) {
 
     .grid-content {
@@ -86,5 +93,4 @@ body {
     #top-bar {
         display: flex;
     }
-
 }

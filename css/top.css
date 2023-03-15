@@ -1,16 +1,29 @@
-/* copyright João Sousa 2022 */
+/* copyright João Sousa 2023 */
 .top {
     display: flex;
     align-items: center;
     font-family: var(--font1);
-    background-color: var(--cor3hover);
+    background-color: var(--cor3);
     /* background-image: linear-gradient(90deg, red,orange,yellow,green,blue,indigo,violet); */
-    background-image: linear-gradient(90deg,  var(--cor3hover),  var(--cor3));
-    height: 60px;
+    /* background-image: linear-gradient(90deg,  var(--cor3),  var(--cor3)); */
+    height: 65px;
     position: sticky;
     top: 0;
     z-index: 15;
     color: var(--cor0);
+    transition: all 0.9s;
+}
+
+#titulo {
+    cursor: pointer;
+}
+
+.topGlass {
+    background-color: #d3d3d33f !important;
+    /* height: 100px !important; */
+    position: fixed !important;
+    width: 100%;
+    backdrop-filter: blur(7px);
 }
 
 .top-bar {
@@ -21,7 +34,7 @@
     color: var(--cor1);
 }
 
-.top > div {
+.top>div {
     padding: 30px;
     font-size: 1.7em;
 }
